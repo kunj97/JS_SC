@@ -1,0 +1,114 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>Canvas exercise</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="../../images/hcj.png" />
+    <link type="text/css" rel="stylesheet" href="canvas.css" />
+  </head>
+  <body>
+    <header class=header>
+      <p>Canvas Exercise
+    </header>
+    
+    <div class=frame>
+      <!-- Left column start ===================================================
+       Left column contains the drawing parameters and operations
+       ===================================================================== -->
+      
+      <div class=leftColumn>
+        <!-- ===================================================================
+         Draw line parameters and operations
+         =================================================================== -->
+        <div class=operation>
+          <button id=drawline onClick="drawLine()">Draw Line</button><br>
+          
+          X start <input type=text id=xStart size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          X end <input type=text id=xEnd size=4 /><br>
+          
+          Y start <input type=text id=yStart size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Y end <input type=text id=yEnd size=4 /><br>
+          
+          Line width &nbsp;<input type=text id=lineLineWidth size=4 />
+          
+          &nbsp;&nbsp;&nbsp;Color <input type=text id=lineLineColor size=6 />
+        </div>
+        <!-- ===================================================================
+         Draw Circle parameters and operations
+         =================================================================== -->        
+        <hr>
+        <div class=operation>
+          <button id=drawCircle onClick="drawCircle()">Draw Circle</button><br>
+          
+          X center <input type=text id=xCenter size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Radius <input type=text id=radius size=4 /><br>
+          
+          Y center <input type=text id=yCenter size=4 /><br>
+          
+          Line width &nbsp;<input type=text id=circleLineWidth size=4 />
+          &nbsp;&nbsp;&nbsp;
+          Color <input type=text id=circleLineColor size=6 />
+        </div>
+        <!-- ===================================================================
+         Draw Rectangle parameters and operations
+         =================================================================== -->
+        <hr>
+        <div class=operation>
+          <button id=drawRect onClick="drawRect()">Draw Rect</button><br>
+          
+          X top left <input type=text id=xTopLeft size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Rect width &nbsp;<input type=text id=rectWidth size=4 /><br>
+          
+          Y top left <input type=text id=yTopLeft size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Rect height <input type=text id=rectHeight size=4 /><br>
+          
+          Line width &nbsp;<input type=text id=rectLineWidth size=4 />
+          &nbsp;&nbsp;&nbsp;
+          Color <input type=text id=rectLineColor size=6 />
+        </div>
+        <!-- ===================================================================
+         Draw Text parameters and operations
+         =================================================================== -->
+        <hr>
+        <div class=operation>
+          <button id=drawText onClick="drawText()">Draw Text</button><br>
+          
+          X bot left <input type=text id=xBotLeft size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Font size <input type=text id=fontSize size=4 /><br>
+          
+          Y bot left <input type=text id=yBotLeft size=4 />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Color <input type=text id=textColor size=6 /><br>
+          Text align <select id="textAlign">
+            <option>left</option>
+            <option>center</option>
+            <option>right</option>
+          </select><br>
+          Text <input type=text id=theText size=26 style="text-align:left" />
+        </div>
+      </div>
+      <!-- Left column end =========================== 
+       ======================================================================-->
+      
+      <!-- Right column start ==================================================
+       Contains the canvas, the Clear button and the Montage button
+       ===================================================================== -->    
+      <div class=rightColumn>
+        <div style="background: #bfb;">
+          <button id="clear" onClick="clearCanvas()">Clear</button>
+          <button id="montage" onClick="drawMontage()">Montage</button>
+          <button id="pattern" onClick="pattern()">Pattern</button>
+        </div>
+        <canvas id="canvas" width="500px" height="500px"></canvas>
+      </div>
+      <!-- Right column end =========================-->
+    </div>
+    <script src="canvas.js"></script>
+  </body>
+</html>
